@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/input_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:minHeight="48dp"
+        android:text="@string/input"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/input_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@id/input_label"
+        android:hint="@string/value"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColorHint="#757575" />
+
+    <Spinner
+        android:id="@+id/input_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@id/input_label"
+        android:entries="@array/units"
+        android:minHeight="48dp" />
+
+    <TextView
+        android:id="@+id/output_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/input_label"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/output"
+        android:textSize="18sp"
+        android:minHeight="48dp"/>
+
+    <Spinner
+        android:id="@+id/output_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/input_spinner"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_toEndOf="@id/output_label"
+        android:entries="@array/units"
+        android:gravity="center"
+        android:minHeight="48dp" />
+
+    <TextView
+        android:id="@+id/output_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/input_text"
+        android:layout_marginStart="-20dp"
+        android:layout_marginTop="77dp"
+        android:layout_toEndOf="@id/output_label"
+        android:gravity="center"
+        android:text="" />
+
+    <Button
+        android:id="@+id/calculate_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/output_label"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="50dp"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:text="@string/calculate" />
+</RelativeLayout>
